@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Outloko.Modules.Mail.Views
+namespace Outloko.Modules.Contacts.Menus
 {
     /// <summary>
-    /// Interaction logic for ViewA.xaml
+    /// Interaction logic for HomeTab.xaml
     /// </summary>
-    public partial class ViewA : UserControl
+    public partial class HomeTab
     {
-        public ViewA()
+        public HomeTab()
         {
             InitializeComponent();
         }

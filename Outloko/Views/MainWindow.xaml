@@ -5,7 +5,7 @@
         xmlns:ig="http://schemas.infragistics.com/xaml/wpf"
         xmlns:core="clr-namespace:Outloko.Core;assembly=Outloko.Core"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="{Binding Title}" Height="350" Width="525">
+        Title="{Binding Title}" Height="720" Width="1080">
     <ig:RibbonWindowContentHost>
         <ig:RibbonWindowContentHost.Ribbon>
             <ig:XamRibbon prism:RegionManager.RegionName="{x:Static core:RegionNames.RibbonRegion}">
@@ -14,7 +14,7 @@
 
         <DockPanel LastChildFill="True">
 
-            <ig:XamOutlookBar prism:RegionManager.RegionName="{x:Static core:RegionNames.OutlookGroupRegion}"  DockPanel.Dock="Left" Width="200">
+            <ig:XamOutlookBar prism:RegionManager.RegionName="{x:Static core:RegionNames.OutlookGroupRegion}" DockPanel.Dock="Left" Width="200" SelectedGroupChanged="XamOutlookBar_SelectedGroupChanged">
                 
             </ig:XamOutlookBar>
             

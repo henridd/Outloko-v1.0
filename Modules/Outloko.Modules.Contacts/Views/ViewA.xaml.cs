@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Outloko.Core;
+using Outloko.Modules.Contacts.Menus;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +20,7 @@ namespace Outloko.Modules.Contacts.Views
     /// <summary>
     /// Interaction logic for ViewA.xaml
     /// </summary>
+    [DependentView(RegionNames.RibbonRegion, typeof(HomeTab))]
     public partial class ViewA : UserControl
     {
         public ViewA()

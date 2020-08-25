@@ -1,8 +1,12 @@
 ﻿using Outloko.Core;
 using Outloko.Modules.Mail.Menus;
+using Outloko.Modules.Mail.ViewModels;
 using Outloko.Modules.Mail.Views;
+using Outloko.Services;
+using Outloko.Services.Interfaces;
 using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Mvvm;
 using Prism.Regions;
 
 namespace Outloko.Modules.Mail
@@ -18,13 +22,15 @@ namespace Outloko.Modules.Mail
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            _regionManager.RegisterViewWithRegion(RegionNames.RibbonRegion, typeof(HomeTab));
             _regionManager.RegisterViewWithRegion(RegionNames.OutlookGroupRegion, typeof(MailGroup));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<ViewA>();
+            ViewModelLocationProvider.Register<MailGroup, MailGroupViewModel>();
+
+            containerRegistry.RegisterForNavigation<MailList, MailListViewModel>();
+            containerRegistry.RegisterSingleton<IMailService, MailService>();
         }
     }
 }

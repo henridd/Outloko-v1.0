@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:local="clr-namespace:Outloko.Modules.Mail.Menus"
              xmlns:ig="http://schemas.infragistics.com/xaml/wpf"
-             Header="Home">
+             Header="Mail">
     <ig:RibbonGroup Id="Clipboard" Caption="New">
         <ig:ToolHorizontalWrapPanel>
             <ig:ButtonTool Caption="Button" ig:RibbonGroup.MaximumSize="ImageAndTextLarge"/>
