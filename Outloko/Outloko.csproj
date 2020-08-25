@@ -64,6 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\Regions\DependentViewRegionBehaviour.cs" />
     <Compile Include="Core\Regions\XamOutlookBarRegionAdapter.cs" />
     <Compile Include="Core\Regions\XamRibbonRegionAdapter.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -96,6 +97,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Infragistics.WPF.DataTree">
+      <Version>20.1.26</Version>
+    </PackageReference>
     <PackageReference Include="Infragistics.WPF.OutlookBar">
       <Version>20.1.26</Version>
     </PackageReference>
@@ -129,6 +133,10 @@
     <ProjectReference Include="..\Outloko.Core\Outloko.Core.csproj">
       <Project>{f4f722a0-6951-4db0-9ebd-cf5b681dd944}</Project>
       <Name>Outloko.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Outloko.Services.Interfaces\Outloko.Services.Interfaces.csproj">
+      <Project>{b0c40eb3-92cf-4f45-b60d-ee88ba591950}</Project>
+      <Name>Outloko.Services.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

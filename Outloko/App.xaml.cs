@@ -1,5 +1,6 @@
 ﻿using Infragistics.Windows.OutlookBar;
 using Infragistics.Windows.Ribbon;
+using Outloko.Core;
 using Outloko.Core.Regions;
 using Outloko.Modules.Contacts;
 using Outloko.Modules.Mail;
@@ -24,7 +25,7 @@ namespace Outloko
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

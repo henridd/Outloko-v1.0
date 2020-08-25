@@ -1,4 +1,5 @@
 ﻿using Infragistics.Windows.OutlookBar;
+using Outloko.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,14 @@ namespace Outloko.Modules.Contacts.Menus
     /// <summary>
     /// Interaction logic for ContactsGroup.xaml
     /// </summary>
-    public partial class ContactsGroup : OutlookBarGroup
+    public partial class ContactsGroup : OutlookBarGroup, IOutlokoBarGroup
     {
+        public string DefaultNavigationPath => "ViewA";
+
         public ContactsGroup()
         {
             InitializeComponent();
         }
+
     }
 }
