@@ -1,5 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Regions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Outloko.Modules.Calendar.ViewModels
 {
-    public class ViewAViewModel : BindableBase
+    public class ViewAViewModel : BindableBase, IRegionMemberLifetime
     {
         private string _message;
         public string Message
@@ -17,9 +18,11 @@ namespace Outloko.Modules.Calendar.ViewModels
             set { SetProperty(ref _message, value); }
         }
 
+
         public ViewAViewModel()
         {
             Message = "View A from your Prism Module";
         }
+        public bool KeepAlive => false;
     }
 }
