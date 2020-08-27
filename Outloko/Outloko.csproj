@@ -64,7 +64,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Core\Regions\DependentViewRegionBehaviour.cs" />
+    <Compile Include="Core\Regions\DependentViewInfo.cs" />
+    <Compile Include="Core\Regions\DependentViewRegionBehavior.cs" />
     <Compile Include="Core\Regions\XamOutlookBarRegionAdapter.cs" />
     <Compile Include="Core\Regions\XamRibbonRegionAdapter.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
